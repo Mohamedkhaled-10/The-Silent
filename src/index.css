@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer base {
+  html[lang="ar"] body {
+    font-family: "Cairo", "Tahoma", "Arial", sans-serif;
+    line-height: 1.6;
+  }
+
+  html[lang="ar"] .font-mono {
+    font-family: "Cairo", "Tahoma", "Arial", monospace, sans-serif;
+  }
+
+  /* Preserve connected Arabic cursive shaping by neutralizing wide letter-spacing on Arabic runs */
+  html[lang="ar"] [data-ar-text="true"],
+  html[lang="ar"] [data-ar-text="true"] * {
+    letter-spacing: 0 !important;
+  }
+}
